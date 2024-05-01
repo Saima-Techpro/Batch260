@@ -1,5 +1,7 @@
 package day02variablesconcatenation;
 
+import java.util.Arrays;
+
 public class Variable02 {
     public static void main(String[] args) {
         //      COMPARISON OPERATORS
@@ -59,6 +61,16 @@ public class Variable02 {
 
         // OR Operator is quite generous. Even if one condition is fulfilled, it returns the data
         // AND Operator is quite strict. Even if one condition is NOT fulfilled, it does NOT return the data
+
+        System.out.println("========================");
+        boolean a = 10 > 6; //TRUE
+        boolean b = 2 + 3 != 5; // FALSE
+        boolean c = 2 + 3 * 5 >= 19;
+
+        System.out.println(a && b); //FALSE
+        System.out.println(a  || b || c);//TRUE
+
+
 
 
 

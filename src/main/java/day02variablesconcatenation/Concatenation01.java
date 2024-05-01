@@ -1,7 +1,19 @@
 package day02variablesconcatenation;
 
+import java.util.Arrays;
+
 public class Concatenation01 {
     public static void main(String[] args) {
+
+        //NON-PRIMITIVE DATA TYPES....
+        /*
+        1) A created class is a non-primitive data type. (Variables02)
+                So, there is no limit for number of non-primitive data types...
+        2) Non-primitive data types start with uppercase in naming...
+        3) Non-primitive data types have values and methods; so they occupy memory in different sizes...
+         */
+
+        // String Data Type (Class) : stores sentences, words, symbols, numbers etc.
 
         // Example: Create a greeting message in String container and print it on the console
 
@@ -67,6 +79,7 @@ public class Concatenation01 {
         char c = 'M';
 
         System.out.println(x + c + y); // 109  => because JAVA takes the ASCII value of char data type (ASCII value is number) so plus sign works as addition
+
 
 
 
