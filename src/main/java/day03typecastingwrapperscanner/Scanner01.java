@@ -39,6 +39,14 @@ public class Scanner01 {
 
         // HW TASK:  Ask user to provide their age and address, store and print it on the console
 
+        System.out.println("Enter your age");
+        byte age = input.nextByte();
+        System.out.println( "Age: " + age);
+
+        System.out.println("Enter your address");
+        String address = input.next(); // next() method only stores single word BEFORE the space
+        System.out.println("address: " + address);
+
 
     }
 
