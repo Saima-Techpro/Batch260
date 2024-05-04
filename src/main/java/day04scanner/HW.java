@@ -28,8 +28,8 @@ public class HW {
 //        Hint 2: Perimeter of a square is 4x length
 
 
-        System.out.println("Enter length");
-        Double l = input.nextDouble();
+        System.out.println("Enter the length of a square");
+        double l = input.nextDouble();
 
         System.out.println("Area of the perimeter is: "+ (l*l) + (4*l));
 
@@ -40,6 +40,15 @@ public class HW {
         System.out.println("Enter a number to calculate its cube");
         short c = input.nextShort();
         System.out.println("The cube is: " + 3*c);
+        // OR
+        int j=3;
+        int cubeOfNumber = (int) Math.pow(j,c);
+        System.out.println("The cube of number =" + cubeOfNumber);
+
+        /*
+        pow() is an built-in method in Java Math class and is used to calculate the power of a given number.
+        The power of a number refers to how many times to multiply the number with itself.
+         */
 
 //       Q.3:
 //        Hint 1: Take pi number as 3.14159
@@ -48,9 +57,17 @@ public class HW {
 //        Hint 4: To get float, use nextFloat()
 
         System.out.println("Enter radius of a circle");
-        Float radious = input.nextFloat();
-        System.out.println("Area of the circle is: " + 3.14159*(radious*radious));
-        System.out.println("Perimeter of the circle is: " + 2*3.14159*radious);
+        Float radius = input.nextFloat();
+        System.out.println("Area of the circle is: " + 3.14159*(radius*radius));
+        System.out.println("Perimeter of the circle is: " + 2*3.14159*radius);
+
+        // OR
+
+        double perimeterOfCircle = 2 * Math.PI * radius;
+        System.out.println("The perimeter of a circle =" + perimeterOfCircle);
+        int i =2;
+        double areaOfCircle = Math.PI * Math.pow(i,radius);
+        System.out.println("The area of a circle =" + areaOfCircle);
 
 //        Q.4:  Type a code which converts the mile to kilometer. Mile value will be
 //        entered by user. (Use double)
@@ -59,7 +76,7 @@ public class HW {
 
         System.out.println("Enter miles");
         double miles = input.nextDouble();
-        System.out.println((miles)*1.6 + " km");
+        System.out.println(miles + " miles = " +(miles*1.6) + " km");
 
 
 //        Q.5: Type a code which converts the hours to seconds. Hours value will be entered by user. (Use long)
@@ -68,7 +85,7 @@ public class HW {
 
         System.out.println("Hours");
         long h = input.nextLong();
-        System.out.println((h)*60*60 + " seconds");
+        System.out.println(h + " hours = " +(h*60*60) + " seconds");
 
 //        Q.6: Type a program which asks user to enter his/her full name, and address
 //        then print them on the console like the full name should be in the first line,
