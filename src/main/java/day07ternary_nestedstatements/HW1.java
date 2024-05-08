@@ -1,6 +1,8 @@
 package day07ternary_nestedstatements;
 
-public class HW {
+import java.util.Scanner;
+
+public class HW1 {
 
     /*
     Task 1: use nested TERNARY
@@ -19,23 +21,19 @@ public class HW {
           otherwise the output will be "Invalid Password"
           For example; zoe ==> Valid password  -   john ==> Invalid
 
-
-          Task 2: Use  nested If Statement and nested Ternary both
-
-     Type code to check the password
-     If it has more than 8 characters, initial should be 'i'
-     If it has no more than 8 characters initial should be 'K'
-     Solve the task by using nested-ternary
-
-     Hint: length() method is used to count the length of a String
-
-
      */
 
     public static void main(String[] args) {
+        // Task 1:
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your password please");
 
+        String pwd = scan.next();
+        char pwdInitial = pwd.charAt(0);
 
+        String check = ( pwdInitial >= 'A' && pwdInitial <= 'Z') ? (pwdInitial == 'A' ? "Valid Password" : "Invalid Password") : (pwdInitial >= 'a' && pwdInitial <= 'z') ? (pwdInitial == 'z' ? "Valid Password" : "Invalid Password"):"Invalid Password";
 
+        System.out.println(check);
 
 
 
