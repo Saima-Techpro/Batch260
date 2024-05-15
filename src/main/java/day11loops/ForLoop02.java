@@ -37,11 +37,18 @@ public class ForLoop02 {
               sum1 = sum1+i%10;
         }
         System.out.println("sum1 = " + sum1);
+        System.out.println("=======================");
 
         //Homework: Calculate total value of first two digits and last two digits in the given integer
         // 1997 => 19 + 97 = 116
         //decrement can be done by dividing by 100
 
+        int sum2 = 0;
+        for (int i = 1997; i >0 ; i/=100){
+            sum2 = sum2 + i%100;
+        }
+
+        System.out.println("sum2 = " + sum2);
 
 
     }

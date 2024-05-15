@@ -67,7 +67,18 @@ public class ForLoop01 {
             System.out.println("This is NOT a palindrome!");
         }
 
+        System.out.println("==================");
+
         // HW: Reverse the name "Johnson"
+        String name = "Johnson";
+        String reversedName = "";
+        for(int i = name.length()-1; i>=0; i--){
+            char ch2 = name.charAt(i);
+            reversedName = reversedName + ch2;
+        }
+        System.out.print(reversedName);
+
+        System.out.println();
 
 
 
