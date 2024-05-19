@@ -58,7 +58,6 @@ public class NestedForLoop01 {
 
          */
 
-
 //        Example: Print the following pattern on the console:
 //                    * * * *
 //                    * * * *

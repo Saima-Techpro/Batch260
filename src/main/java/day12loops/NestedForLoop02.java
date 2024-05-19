@@ -32,16 +32,5 @@ public class NestedForLoop02 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     }
 }
