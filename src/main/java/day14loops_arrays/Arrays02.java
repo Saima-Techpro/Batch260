@@ -43,6 +43,10 @@ public class Arrays02 {
 
         System.out.println("====== Using for each loop =======");
 
+        //Note: To get the number of characters from a String use "length()".
+        //      To get the number of elements from an Array use "length".
+
+
         // 2nd: for-each loop => enhanced version of loops ... commonly used in Arrays and Collections
         /*
          for (returndataType nameOfTempContainer : nameoftheVariable){
@@ -73,6 +77,8 @@ public class Arrays02 {
             sum = sum + w;
         }
         System.out.println("sum = " + sum);  // 77.5
+
+
 
 
     }
