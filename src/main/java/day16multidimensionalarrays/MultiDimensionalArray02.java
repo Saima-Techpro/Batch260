@@ -1,0 +1,58 @@
+package day16multidimensionalarrays;
+
+import java.util.Arrays;
+
+public class MultiDimensionalArray02 {
+    public static void main(String[] args) {
+
+        // Create a MultiDimensional Array with int data type.
+        // Calculate total value of min and max element.
+
+
+        int[][] numbers = {{12, 5}, {34, 56}, {3, 7}};
+        System.out.println("numbers = " + Arrays.deepToString(numbers));  // [[12, 5], [34, 56], [3, 7]]
+
+        // logic: compare and traverse
+        // Traverse each cell in the array and compare
+        // inductive reasoning => Inductive reasoning is when you start with specific observations or facts,
+        // and infer a general rule or conclusion from them. For example, if you notice that every time you
+        // eat spicy food, you get a stomach ache, you might use inductive reasoning to conclude that spicy
+        // food causes stomach aches
+
+
+        int min = numbers[0][0]; // we assume that the number at this index is the min in our given md
+        int max = numbers[1][0]; // we assume that the number at this index is the max in our given md
+
+
+        for (int[] inner: numbers){
+            for (int each : inner ){
+                min = Math.min(each, min);
+                max = Math.max(each, max);
+            }
+
+        }
+        System.out.println("min = " + min); // 3
+        System.out.println("max = " + max); // 56
+        System.out.println(min+max); // 59
+
+        System.out.println("========================");
+        // Create a MultiDimensional Array with int data type.
+        // Calculate total value of all elements.
+
+        int[][] num = {{78, 2}, {3, 6}, {6, 91, 33}};
+        System.out.println("num = " + Arrays.deepToString(num)); // [[78, 2], [3, 6], [6, 91, 33]]
+
+        // [[78, 2], [3, 6], [6, 91, 33]]
+        int sum = 0;
+
+        for (int[] innerArray: num){
+
+            for (int each: innerArray){
+                sum = sum+each;
+            }
+        }
+        System.out.println("sum = " + sum);
+
+
+    }
+}

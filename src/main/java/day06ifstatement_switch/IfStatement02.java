@@ -35,9 +35,6 @@ public class IfStatement02 {
                 System.out.println("Keep working! You can't retire yet!");
             }
 
-
-
-
         } else {
             System.out.println("Please define your gender");
         }

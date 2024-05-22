@@ -1,6 +1,7 @@
 package day15arrays;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Arrays04 {
     public static void main(String[] args) {
@@ -40,9 +41,38 @@ public class Arrays04 {
         // Use loops to get the names from the user
         // Print all the names of the students on the console
 
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the number of students you want to register");
+        int numOfStudents = scan.nextInt();
+
+        String[] studentNames = new String[numOfStudents];
+        System.out.println("studentNames = " + Arrays.toString(studentNames));  // [null, null, null, null, null]
 
 
+        for (int i =0; i < numOfStudents; i++) {
+
+            System.out.println("Please enter " +(i+1) +" the name of the student. To stop, press Q");
+
+            String inputNames = scan.next();
+
+            if ( !inputNames.equalsIgnoreCase("Q")) {
+
+                studentNames[i] = (inputNames.replaceAll("\\s++", " "));
+            } else {
+                break;  // sentinel value
+            }
+        }
+        System.out.println(Arrays.toString(studentNames));  // [Tom, null]
+        System.out.println(studentNames[0]);  // Tom
+
+
+        scan.close();
 
 
     }
 }
+/*
+In computer programming, a sentinel value (also referred to as a flag value, trip value, rogue value, signal value, or
+dummy data) is a special value in the context of an algorithm which uses its presence as a
+condition of termination, typically in a loop or recursive algorithm.
+ */
