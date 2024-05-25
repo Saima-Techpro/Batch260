@@ -8,17 +8,8 @@ public class MultiDimensionalArray02 {
         // Create a MultiDimensional Array with int data type.
         // Calculate total value of min and max element.
 
-
         int[][] numbers = {{12, 5}, {34, 56}, {3, 7}};
         System.out.println("numbers = " + Arrays.deepToString(numbers));  // [[12, 5], [34, 56], [3, 7]]
-
-        // logic: compare and traverse
-        // Traverse each cell in the array and compare
-        // inductive reasoning => Inductive reasoning is when you start with specific observations or facts,
-        // and infer a general rule or conclusion from them. For example, if you notice that every time you
-        // eat spicy food, you get a stomach ache, you might use inductive reasoning to conclude that spicy
-        // food causes stomach aches
-
 
         int min = numbers[0][0]; // we assume that the number at this index is the min in our given md
         int max = numbers[1][0]; // we assume that the number at this index is the max in our given md
@@ -33,7 +24,7 @@ public class MultiDimensionalArray02 {
         }
         System.out.println("min = " + min); // 3
         System.out.println("max = " + max); // 56
-        System.out.println(min+max); // 59
+        System.out.println("sum: " + (min+max)); // 59
 
         System.out.println("========================");
         // Create a MultiDimensional Array with int data type.
@@ -46,7 +37,6 @@ public class MultiDimensionalArray02 {
         int sum = 0;
 
         for (int[] innerArray: num){
-
             for (int each: innerArray){
                 sum = sum+each;
             }

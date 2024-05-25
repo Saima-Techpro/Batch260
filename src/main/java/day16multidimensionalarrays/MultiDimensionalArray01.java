@@ -89,7 +89,30 @@ public class MultiDimensionalArray01 {
         String[][] names = {{"Tom", "Ali"}, {"Jane"}, {"Henok", "Uranus", "Junaid"}, {"Jennifer", "Mel", "Jerry", "Judi"}};
         System.out.println("names = " + Arrays.deepToString(names));  // [[Tom, Ali], [Jane], [Henok, Uranus, Junaid], [Jennifer, Mel, Jerry, Judi]]
 
+        System.out.println("======== HW Task ========== ");
         // HW task:
         // Create a String Multidimensional array and print all values which contain "a"
+
+        String[][] cities = { { "Istanbul", "Ankara", "Adana", "Izmir" }, { "Washington", "New York", "Chicago" },
+                { "London", "Chelsea", "Newcastle" }, { "Berlin", "Hamburg" } };
+
+        for (String[] i : cities) {
+
+            for (String j : i) {
+
+                if (j.contains("a")) {
+                    System.out.println(j);
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
     }
 }
