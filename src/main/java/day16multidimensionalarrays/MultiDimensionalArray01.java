@@ -108,11 +108,23 @@ public class MultiDimensionalArray01 {
         }
 
 
-
-
-
-
-
-
     }
 }
+
+/*
+
+I know I'm kinda late to the party, but it's really not extremely hard to compute the memory footprint.
+Let's take your first example: int c[] = new int[N];
+According to the 64-bit memory model, an int is 4 bytes, so all the elements will be 4*N bytes in size.
+In addition to that, Java has a 24 bytes array overhead and there's also 8 bytes for the actual array object.
+So that's a total of 32 + 4 * N bytes.
+For a 2-dimensional array: int a[][] = new int[N][M];
+
+It's basically the same just that each element in the first array is another array of size M, so instead of
+4 we have 32 + 4 * M, so the total size is 32 + (32 + 4 * M) * N.
+
+The trouble with this answer is that they ignore overhead. Each array also stores things like the number of
+dimensions it has, how long it is and some stuff the garbage collector uses.
+
+For a simple estimate, you should be fine by using the calculations from the other answers and adding 100-200 bytes.
+ */
