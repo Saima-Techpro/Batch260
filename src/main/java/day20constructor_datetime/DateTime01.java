@@ -76,7 +76,14 @@ public class DateTime01 {
         }
 
         // HW: Enter your birthday and get the exact day when you were born
+        int year1 = 1992;
+        int month1 = 5;
+        int day1 = 4;
 
+        LocalDate myBirthday = LocalDate.of(1992, 5, 4);
+        System.out.println("My birthday : " + myBirthday); // (1992-05-04)
+
+        System.out.println("Day: " + myBirthday.getDayOfWeek());  // MONDAY
 
 
 
