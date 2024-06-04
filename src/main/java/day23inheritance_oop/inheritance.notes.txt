@@ -1,0 +1,102 @@
+OOP => Object-Oriented Programming Language
+
+    //It is the way how various objects we see in real life are transferred into computer environment
+    //For example: showing an object's colour, state, name, year of manufacture, among many other properties
+
+        OOP language has 4 fundamental characteristics.
+        1. Inheritance
+        2. Polymorphism
+        3. Encapsulation
+        4. Abstraction
+
+        1)Inheritance
+        It is a concept that transfers properties from one class to other classes
+        We use "extends" keyword in child class to inherit from parent
+
+
+    1. We use "inheritance"
+       a) to prevent "repetition"
+       b) to make "maintenance" easy
+       c) to make our classes "atomic"
+
+     2. To make a class child of another class, we use "extends" keyword
+
+     3. Child classes can use class members from the parent classes
+        However, parent classes cannot use anything from the child classes.
+        (one way direction)
+     4. Every class in Java has at least one parent class, which is "Object Class".
+        "Object Class" is like Adam .. it doesn't have parent class.
+
+     5. Inheritance types in Java
+        a) Multilevel Inheritance  => Grandparent => parent => child
+        b) Hierarchical Inheritance => Single parent => Many children
+        c) Multiple Inheritance => more than one parent at the same level (Java doesn't support it)
+        d) Opposite of "Multiple Inheritance" is "Single Inheritance"
+          Java supports "Single Inheritance"
+
+        Java does not support "Multiple Inheritance". It supports "Single Inheritance"
+
+        IS-A relationship and HAS-A relationship
+
+        Mammal IS-A child of Animal => true
+        Bird IS-A child of Mammal => true
+        Bird IS-A child of Animal => true
+        Cat IS_A Mammal => true
+
+        Animal HAS-A Mammal => true
+        Cat HAS-A Mammal => false
+        Dog HAS-A Animal => false
+        Dog HAS-A Mammal => false
+
+
+       In Java, the relationship from parent to child is called a HAS-A Relationship (from top to bottom)
+       In Java, the relationship from child to parent is called an IS-A Relationship (from bottom to top)
+
+
+NOTES ABOUT "super()" and "super" keyword
+
+            1)"super" keyword is used to get data(variables + methods) from parent classes in inheritance
+
+            2)If there is no data in parent, Java looks for the data in grandparents
+              If no parent has the data, Java gives Compile Time Error.
+
+            3)"super()" must be the first statement in the constructor body, but "super" can be in any line
+
+            4)"super()" is for calling "constructors" from parent class, "super" is for calling variables and methods
+              from the parent class
+
+            5)"this" is used to call data from the class itself.
+              When you use "this", it means you are telling Java "do not go to the parent, stay in this class"
+
+                    Why make a super call?
+
+        1) If you use the super keyword, you can call the method of the parent class and also modify the behaviour of this method according to the needs of the child class.
+        2) The extends keyword only allows inheritance, but does not modify the methods of the parent class
+
+
+
+Constructor Hierarchy
+
+When you create an object from a child class, the constructors are executed from topmost parent class downwards
+
+Imagine you are an automobile manufacturer producing different types of automobiles.
+
+    1- Grandparent Class(Vehicle): This class contains the basic features of all automobiles.
+    For example, common features like the brand, model, and fuel type of the automobiles are defined here.
+    This class has a constructor, and when a new automobile is created, this constructor is called.
+    This constructor sets up the basic features of the automobile.
+
+    2- Parent Class(Car): This class extends the Grandparent class and represents more specialized types of automobiles.
+     For example, features of sedan or h-pack automobiles could be defined here.
+     The constructor of the Parent class sets both its own features and those of the inherited Grandparent class.
+
+    3- Child Class: This class extends the Parent class and represents an even more specific type of automobile,
+    for example, sports cars. The constructor of the Child class sets up its own features as well as those
+    inherited from the Parent and Grandparent classes.
+
+    **The constructors run downwards from top to bottom
+
+    Result: Each class represents a more specialized type of automobile and inherits the features of its
+    superclass while adding its own specific features.
+
+

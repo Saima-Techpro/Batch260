@@ -9,14 +9,14 @@ public class StringBuilder02 {
 
            ==> Initially, Java gives you a capacity of 16.
                 If you exceed this given capacity, Java adjusts the new capacity : default*2+2
-                After that limit: optimization starts ?????????
+                NOTE: Capacity growth can reach OPTIMIZATION after the capacity has doubled a few times.
 
                 Optimization means it will stop following this rule => default*2+2 of increasing the allocation
                 of more spaces after some point, and it will start allocating ONLY that many places that are added.
 
          Can we change the default capacity and assign capacity according to our needs?
          Yes we can. We mention the int data while creating StringBuilder.
-         That will be considered CUSTOM CAPACITY.
+         That is called CUSTOM CAPACITY.
          */
         StringBuilder sb = new StringBuilder();
 
