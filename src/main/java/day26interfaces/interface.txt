@@ -1,0 +1,55 @@
+
+            **** Notes about INTERFACES ****
+
+1) You cannot create objects from interfaces (they are incomplete structures because they do not have constructors).
+        2) Interfaces can only be parents in the relationship with classes.
+        3) Interfaces are created to store things that must be done.
+        Hence, interfaces are also called "to-do lists".*/
+
+         child         parent
+
+         class           class     ==> extends
+         interface       interface ==> extends
+         class           interface ==> implements
+         interface       class     ==> not possible ***
+
+         4) We can place methods with the same name in multiple interface parents
+        like putting a run() method inside Motor, Air Conditioning, and Brake. When a child class overrides
+        this method, it is unclear from which interface the method comes.
+
+        5) Variables in interfaces are by default public static final. So, it is optional to write them.
+
+        6) We can place variables with the same name in all interfaces. Since they are static and accessed
+         through the interface, it is not a problem.
+
+
+
+       7) Normally, you cannot place concrete methods inside an interface but in some special cases,
+    if you need to put concrete methods;
+        a) You can do this using the default keyword.
+        b) You can do this using the static keyword.
+
+    ==>  To access concrete methods created with the 'static' keyword, you do not need to create an object.
+    The interface name is sufficient.
+
+    ==>  To access concrete methods created with the 'default' keyword, you can create an object from the interface’s child class.
+
+
+***Interview Question***
+
+     8) What are the differences between an Abstract Class and an Interface?
+
+    a) Abstract classes can contain both abstract and concrete methods.
+    However, interfaces contain abstract methods.
+       But, in interfaces, if we want, we can create concrete methods using the 'default' and 'static' keywords.
+
+    b) Abstract classes do not support multiple inheritance, but interfaces do.
+
+    c) Abstract classes can contain all types of variables, variables in interfaces must be
+    public, static, and final.
+
+    d) An interface cannot be a child of a concrete class. An abstract class can be a child of a concrete class.
+
+    e) Abstract classes have constructors (a concrete method can override this constructor as it wishes)
+    but cannot create objects, interfaces do not have constructors, hence cannot create objects.
+
