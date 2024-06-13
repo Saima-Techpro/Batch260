@@ -1,0 +1,63 @@
+Collections are for storing multiple data in the same data type. (like Arrays but they’re more advanced)
+Collections are flexible (in length). Arrays are fixed (in length).
+Collections have many useful methods. (advanced structure but slower than Arrays as they use a lot of memory)
+
+Collections are a set of classes and interfaces used to store and process objects.
+
+There are three main Collections:
+   1) List(interface)  ==>  a) ArrayList  (concrete class)     b) LinkedList (concrete class)
+   2) Queue ==>  a)Priority Queue   b) Deque
+   3) Set   ==>  a) HashSet         b) LinkedHashSet   c) TreeSet
+
+   a) ArrayLists are successful in "search operations" but not good at "adding" and "removing" operations.
+   b) LinkedList are successful in "adding" and "removing" operations but not good at "search operations".
+
+Structural difference:
+   LinkedLists have "nodes" , not elements. "Nodes" consist of 2 parts:
+   1) data  2) pointer
+   "Pointer" acts like index but is not an index.
+
+Functional difference:
+   When we add or remove any node, LinkedLists don't have to re-index all the remaining data that's why it is successful at adding and removing.
+   When we add/remove data from LinkedLists , it adds another node (data+pointer) in the middle or remove it in removing operation, but doesn't change/check the other nodes.
+
+Use Case:
+	ArrayList => good for search operations e.g. Product search
+	LinkedList => good for adding/removing e.g. shopping cart
+
+    —Collections support various object processing methods such as:
+        Adding: Used to add an object to a collection.
+        Deleting: Used to remove an object from a collection.
+        Searching(get): Used to find an object in a collection.
+        Iterating: Used to process all objects in a collection.
+
+        —Collections enable Java programmers to:
+        Store data efficiently
+        Process data quickly (searching, sorting, filtering)
+        Store data securely
+
+
+        		******LinkedList****
+
+     LinkedLists also have a series of indexes. However, these indexes represent the position of the nodes within
+        the LinkedList.
+
+        In ArrayLists, direct access to an element's index is possible to reach that element.
+        However, in LinkedLists, to access an element, you need to reach the node where that element is located.
+        This can make accessing an element in LinkedLists slower.
+
+        To sum up: Reading an element is slower, adding and removing is faster in LinkedList by the help of pointer flexibility
+        Getting (reading) element is faster in ArrayList.
+
+        1)Each element has links pointing to the previous and next elements.
+        Therefore, adding and deleting operations are fast,
+        but accessing elements requires progressing by starting from another element.
+        Access is slower compared to ArrayLists.
+
+        In ArrayLists, we access quickly with get(index).
+        But LinkedLists check each from the beginning to find desired element.
+
+        2)Adding or removing an element from the beginning or end of another element can be done quickly.
+
+        3)Due to links and nodes(pointers and the value), LinkedList generally uses more memory.*/
+
