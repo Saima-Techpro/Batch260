@@ -1,0 +1,54 @@
+**** finally block ****
+
+    1) The 'finally block' is commonly used for;
+    a) Releasing resources: (disconnecting database connections, using the close() method),
+       Especially before Java 7, resources like database connections had to be closed manually.
+       Such resources, if left open for too long, would occupy unnecessary space in the system
+       and could lead to potential performance issues.
+       This became automated post-Java 7 (with the try-with-resources statement).
+
+    b) Closing files: (we had just made a file connection. it could be closed with fis.close();)
+      It's necessary to close files after reading or writing operations are done. Otherwise,
+      file handles unnecessarily occupy space in the system.
+
+    c) Cleanup operations that must run in all cases:
+      (Some operations, whether successful or not, should always be performed at the end of a certain process.
+      For example, logging the start and end times of each operation to a log file. With BufferedWriter)
+
+      NOTE:
+      - multiple finally is not allowed. can be used once.
+      - try + catch  || try + multiple catch || try + catch + finally || try + finally => all variations are available....
+      - multiple catch is ok but multiple finally is not.
+      - try + finally is ok.
+
+
+In Java, the terms final, finally, and finalize() represent three distinct concepts used for different purposes.
+
+    final:
+    For Variables: A variable defined with the final keyword can only be assigned once. This means its value cannot
+    be changed later; it is constant.
+    For Methods: A method defined with the final keyword cannot be overridden by child classes.
+    For Classes: A class defined as final cannot be extended. In other words, it cannot have any child classes.
+
+     finally:
+    The finally block is part of the try-catch structure. It always executes whether an exception occurs in the try
+    block or not. It is commonly used for cleanup activities, such as releasing resources or closing files.
+
+    finalize():
+    This method is defined in the Object class and by default, it does nothing. It is called automatically by the
+    Garbage Collector just before the object is removed from memory. It is generally used to release external
+    resources, but its use is discouraged in modern Java applications.
+
+
+    Interview question
+        What are the differences between throw and throws?
+
+        1) "throw" is used within the method body, whereas "throws" is used in method signature.
+        2) "throw" can be written and used wherever desired within the method body, as many times as needed.
+           "throws" is written immediately after the method signature and only once.
+        3) After "throw", the "new" keyword and a "constructor" are used to create an object.
+           After "throws", only the ""Exception class" name is written.
+        4) "throw" is used to throw an Exception under certain conditions (we set a condition that age cannot be negative),
+           while "throws" is used to indicate that a method can throw a certain Exception
+           (written in anticipation of a possible error).
+

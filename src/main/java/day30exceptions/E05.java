@@ -28,7 +28,11 @@ public class E05 {
             System.out.println("Don't use index greater than the length of the String");
         }catch (ArithmeticException e) {
             System.out.println("Can't divide by zero");
-            System.out.println(e.getCause());
+            System.out.println(e.getCause()); // null  => The getCause() method returns the cause of the exception
+                                              // if the exception was caused by another throwable. However, in this code,
+                                                //  the ArithmeticException is not caused by another throwable;
+                                                // it is directly caused by dividing by zero. Since this exception is
+                                                // not caused by another exception, e.getCause() returns null.
         }
 
     }
