@@ -41,7 +41,6 @@ public class Iterator02 {
         // option 1.  reinitialize the list
         // option 2. create another list
 
-
         // option 1.
         // reinitialize the iterator before modifying elements
         myIter = myList.listIterator();
