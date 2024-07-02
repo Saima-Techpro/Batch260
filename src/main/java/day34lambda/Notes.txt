@@ -1,0 +1,35 @@
+Intermediate Operations:
+        These operations perform a process on a Stream and return another Stream.
+        Thus, you can chain several intermediate operations together.
+
+        Intermediate operations are "lazy." That means the actual operation occurs when
+        a terminal operation is invoked.
+
+        Common intermediate operations include:
+
+        filter: Filters elements that meet a specific condition.
+        map: Transforms each element in the Stream.
+        flatMap: Transforms each element into one or more new elements.
+        sorted: Sorts the elements in natural order or according to a specified comparator.
+        distinct: Retrieves only unique elements.
+        peek: Used for performing an operation on the elements of a Stream without consuming them.
+             */
+        /*Terminal Operations:
+        These operations perform a final process on a Stream and terminate or consume the Stream.
+        Once a terminal operation is performed on a Stream,
+        no further operations can be done on it.
+
+        Common terminal operations include:
+
+        forEach: Performs an operation on each element in the Stream.
+        collect: Converts the elements in the Stream into a collection.
+        reduce: Reduces the elements in the Stream to a single value.
+        sum, min, max, average: Calculates the sum, minimum, maximum,
+        or average of the elements in the Stream.
+        allMatch, anyMatch, noneMatch: Checks if the elements in the Stream meet a specific condition.
+        findFirst, findAny: Retrieves an element from the Stream.
+
+        In summary, intermediate operations return a Stream and terminal operations
+        terminate the Stream. To perform operations on a Stream, at least one terminal
+        operation must be invoked, because intermediate operations are lazy
+        and are actually executed only when a terminal operation is invoked. There is only one terminal operation.
