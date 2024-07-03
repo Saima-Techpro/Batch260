@@ -27,7 +27,8 @@ public class Lambda03 {
         //System.out.println(getFactorial(0)); // NoSuchElementException but in Maths, factorial of 0 is 1.
         System.out.println(getFactorial(0));
 
-        System.out.println(getSumOfEvens(3, 10));
+        System.out.println(getSumOfEvens(3, 10));  // 18
+        System.out.println(getSumOfEvens(20, 10)); // 60
 
     }
 
@@ -68,6 +69,12 @@ public class Lambda03 {
 
     // Create a method to get the sum of EVEN integers between the given range
     public static int getSumOfEvens(int a , int b){
+        if (a>b){
+            int temp = a; // now a is in temp variable
+            a = b;
+            b = temp;
+        }
+
         return IntStream.range(a+1 , b).filter(Utils::isNumEven).sum();
     }
 

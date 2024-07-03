@@ -13,8 +13,8 @@ Intermediate Operations:
         sorted: Sorts the elements in natural order or according to a specified comparator.
         distinct: Retrieves only unique elements.
         peek: Used for performing an operation on the elements of a Stream without consuming them.
-             */
-        /*Terminal Operations:
+
+        Terminal Operations:
         These operations perform a final process on a Stream and terminate or consume the Stream.
         Once a terminal operation is performed on a Stream,
         no further operations can be done on it.
