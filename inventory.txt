@@ -1,0 +1,5 @@
+item='banana', quantity=20, price=0.2
+item='orange', quantity=8, price=0.3
+item='pear', quantity=15, price=0.4
+item='grape', quantity=12, price=0.25
+item='mango', quantity=7, price=1.0
