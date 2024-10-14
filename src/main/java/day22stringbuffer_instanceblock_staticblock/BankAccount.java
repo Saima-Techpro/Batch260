@@ -8,7 +8,7 @@ public class BankAccount {
     private int balance;
 
     // static variable
-    private static int accountCounter = 0; // to counter the number of accounts
+    private static int accountCounter = 0; // to count the number of accounts
 
     // instance block
 

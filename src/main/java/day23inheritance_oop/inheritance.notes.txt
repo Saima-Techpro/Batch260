@@ -68,7 +68,13 @@ NOTES ABOUT "super()" and "super" keyword
             5)"this" is used to call data from the class itself.
               When you use "this", it means you are telling Java "do not go to the parent, stay in this class"
 
-                    Why make a super call?
+            6) "this()" is used to tell Java to use the constructor of this class.
+                "this(with parameter)" is used to tell Java to go to the parameterised constructor of this class,
+                implement all codes in that constructor first and then come back and implement the constructor
+                which had this(with parameter) used initially.
+
+
+           Why make a super call?
 
         1) If you use the super keyword, you can call the method of the parent class and also modify the behaviour of this method according to the needs of the child class.
         2) The extends keyword only allows inheritance, but does not modify the methods of the parent class

@@ -56,7 +56,7 @@ public class InstanceBlock02 {
 
         InstanceBlock02 obj1 = new InstanceBlock02();
         InstanceBlock02 obj2 = new InstanceBlock02(2024);
-        InstanceBlock02 obj3 = new InstanceBlock02(2024, "Green", "Hybrid", "IT Car", "Coding", true, 65000);
+       InstanceBlock02 obj3 = new InstanceBlock02(2024, "Green", "Hybrid", "IT Car", "Coding", true, 65000);
 
         System.out.println(obj3.colour);
         System.out.println(obj3.price);
