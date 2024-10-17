@@ -1,0 +1,50 @@
+Create a program to manage different types of employees
+(full-time, part-time, manager, intern, and contract employees).
+Each employee type has specific attributes and salary calculation rules.
+The system should be able to calculate the total salary for each employee based on their role and conditions.
+
+General Requirements:
+
+The program should allow creating employees with attributes such as name, ID, and salary-related details.
+Each employee type has different attributes and salary calculation methods:
+
+Full-Time Employees: Have a base salary, bonus, and benefits.
+Part-Time Employees: Earn based on hourly rate and hours worked.
+Managers: Inherit from Full-Time Employees, with additional managerial perks.
+Interns: Receive a fixed stipend for a specific duration.
+Contract Employees: Are paid based on contract rate and contract length.
+
+Conditions:
+
+1. The system must validate employee data (name, ID, salary) to ensure they are valid.
+   If any invalid data is entered (e.g., negative salary), the system should provide an error message: "Invalid data entered!".
+2. The system should allow calculating and displaying the total salary for each employee type.
+
+Each employee type has specific salary rules:
+
+Full-Time Employees: Salary is calculated as base salary + bonus + benefits.
+Part-Time Employees: Salary is calculated as hourly rate * hours worked.
+Managers: In addition to the full-time salary, managers should receive a 10% bonus for their managerial role.
+Interns: Receive a fixed stipend.
+Contract Employees: Salary is calculated as contract rate * contract length.
+
+Discounts and Additional Conditions:
+
+Managerial Bonus: Managers receive an additional 10% bonus on top of their full-time salary.
+Part-Time Hours: Part-time employees can only work between 1 and 40 hours per week.
+                 If more than 40 hours is entered, display a warning message: "Invalid number of hours entered!".
+Intern Duration: Interns can only have a maximum internship period of 12 months.
+                 If more than 12 months is entered, display a warning message: "Invalid internship duration!".
+Contract Length: Contract employees can have contracts of up to 24 months.
+                 If the contract length exceeds 24 months, display a warning: "Invalid contract length!".
+
+Output: The system should display the calculated salary and details for each employee type,
+        including any applied conditions or warnings based on input data.
+
+
+Notes:
+Each class uses encapsulation to protect employee data and provides methods to access them safely.
+Polymorphism is demonstrated with the calculateSalary() method, which behaves differently for each type of employee.
+Inheritance is used to extend the behavior of the base Employee class into different types of employees.
+The system also implements validation checks, printing error messages when invalid data is entered.
+This implementation covers the entire system and satisfies the requirements for inheritance, polymorphism, encapsulation, and abstraction.
