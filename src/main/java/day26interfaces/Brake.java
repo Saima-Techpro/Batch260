@@ -18,8 +18,15 @@ public interface Brake {
         System.out.println("200km per hour... ");
     }
 
-
-
+    // Private method
+    private void log() {
+        System.out.println("Private log method");
+    }
+    /*
+    since Java 9, an interface can have private methods. These private methods can be used to share code
+    between default and static methods within the interface. However, they cannot be accessed or inherited
+    by implementing classes.
+     */
 
 }
 

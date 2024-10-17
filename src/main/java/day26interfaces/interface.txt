@@ -53,3 +53,19 @@
     e) Abstract classes have constructors (a concrete method can override this constructor as it wishes)
     but cannot create objects, interfaces do not have constructors, hence cannot create objects.
 
+    What is the significance of using the 'implements' keyword in Java?
+
+    The implements keyword in Java is used to indicate that a class is implementing an interface.
+    When a class implements an interface, it agrees to provide concrete implementations for all the abstract
+    methods declared in that interface.
+
+    Describe a scenario where using an interface would be more beneficial than using an abstract class.
+    Using an interface in Java is often more beneficial when you need to define a contract that can be applied
+    across unrelated classes or when you want to achieve multiple inheritance. Here’s a scenario that highlights
+    why using an interface would be advantageous over an abstract class:
+
+    Scenario: Defining Common Behavior Across Unrelated Classes
+    Imagine you are designing a system with various types of entities like a Printer, Car, and Smartphone.
+    All of these entities can have a common capability: they can be powered on and powered off,
+    but they do not share any common state or belong to the same class hierarchy. Since these entities are
+    fundamentally different, using an interface to define this shared behavior is ideal.
