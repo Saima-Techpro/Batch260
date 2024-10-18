@@ -1,3 +1,5 @@
+                *** NOTES ABOUT COLLECTIONS ***
+
 Collections are for storing multiple data in the same data type. (like Arrays but they’re more advanced)
 Collections are flexible (in length). Arrays are fixed (in length).
 Collections have many useful methods. (advanced structure but slower than Arrays as they use a lot of memory)

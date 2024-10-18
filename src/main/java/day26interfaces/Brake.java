@@ -16,6 +16,7 @@ public interface Brake {
 
     default void power(){// here 'default' is NOT an access modifier. It's considered a keyword
         System.out.println("200km per hour... ");
+        log();
     }
 
     // Private method
