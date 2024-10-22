@@ -39,4 +39,17 @@ public class SimpleInventoryManagement {
         return inventory.stream().mapToDouble(item -> item.getQuantity() * item.getPrice())
                 .sum();
     }
+
+
+    public static void addItem(List<InventoryItem> inventory, InventoryItem newItem) {
+        inventory.add(newItem);
+    }
+
+    public static void removeItem(List<InventoryItem> inventory, String itemName) {
+        inventory.removeIf(item -> item.getItem().equalsIgnoreCase(itemName));
+    }
+
+    public static void updateItemQuantity(List<InventoryItem> inventory, String itemName, int newQuantity) {
+        inventory.stream().filter(item -> item.getItem().equalsIgnoreCase(itemName)).findFirst().ifPresent(item -> item.setQuantity(newQuantity));
+    }
 }

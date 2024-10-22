@@ -1,4 +1,4 @@
-package day28collections;
+package day28collections.real_life_examples;
 
 
 public class TaskWithPriorityQueue {  // Task class with priority

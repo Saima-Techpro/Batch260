@@ -1,4 +1,4 @@
-package day28collections;
+package day28collections.real_life_examples;
 
 public class CustomerCall {  // CustomerCall class representing a customer call with priority
     /*

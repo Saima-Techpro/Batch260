@@ -1,4 +1,4 @@
-package day28collections;
+package day28collections.real_life_examples;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
