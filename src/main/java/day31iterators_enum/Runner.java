@@ -12,8 +12,8 @@ public class Runner {
         EmployeeRecord employeeRecord = new EmployeeRecord("Emily", 456);
 
         System.out.println("employeeRecord = " + employeeRecord); // toString()
-        System.out.println(employeeRecord.name());
-        System.out.println(employeeRecord.employeeNumber());
+        System.out.println(employeeRecord.employeeName());  // (getter method works at the backend)
+        System.out.println(employeeRecord.employeeNum());  //  (getter method works at the backend)
 
         System.out.println(employeeRecord.nameInUpperCase());
         EmployeeRecord.print(); // method call by class name coz print() is static
