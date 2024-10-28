@@ -8,18 +8,27 @@ public class Lambda01 {
     public static void main(String[] args) {
 
         /*
-         1) Lambda is Functional Programming, the other is "Structured Programming".
+         1) Lambdas in Java facilitate functional-style programming by allowing methods to be treated as data,
+         enabling us to write short, reusable functions, often without the overhead of an anonymous class.
+         Lambdas themselves are not "functional programming" but rather a feature that supports a functional
+         programming style in Java, which remains an object-oriented language.
 
             Structured Programming: Structured programming is a programming paradigm that encourages
             writing programs using certain structures or control structures (such as loops, conditional statements).
 
         2) Functional programming is commonly used with Collections and Arrays. (It's not directly used with maps but can be
-            used if converted to a Set with entrySet.)
+            used if converted to a Set with entrySet. To iterate over a Map functionally, it’s common to use entrySet()
+            to convert it to a collection of Map.Entry objects, allowing functional operations to be applied to
+            each entry. Alternatively, maps also support operations like forEach directly.)
 
         Lambda expressions, introduced with Java 8, are a feature used to facilitate functional (method-based) programming.
 
         Essentially, they represent anonymous functions and are usually used to define short functions that
         are to be used once.
+
+        (Anonymous Functions: Lambdas are effectively anonymous functions—functions that have no name and are
+        typically concise. While lambdas are often used for short-lived functions (e.g., passing behavior as an argument),
+        they can also be stored in variables and reused.)
 
     The general advantages of lambda expressions:
     1- Writing less code: Lambdas allow you to write less and more readable code.
