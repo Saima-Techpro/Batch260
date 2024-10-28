@@ -3,25 +3,51 @@ package javapractice.miniproject4.RestaurantOrderProcessingSystem;
 import java.util.List;
 import java.util.Map;
 
-public record Order(String customerName, Map<String, Double> items, double totalCost) {
+public record Order(String customerName, Map<TurkishDish, Integer> items, double totalCost) {
 
 
-    // compact constructor Unique to Records in Java
-    public Order {
-        if (totalCost < 0) {
-            throw new IllegalArgumentException("Total cost cannot be negative.");
-        }
+    // overriding canonical constructor in Record
+    public Order(String customerName, Map<TurkishDish, Integer> items) {
+        this(customerName, items, calculateTotalCost(items));
     }
+
+    private static double calculateTotalCost(Map<TurkishDish, Integer> items) {
+        double total = 0.0;
+        for (Map.Entry<TurkishDish, Integer> entry : items.entrySet()) {
+            total += entry.getKey().getPrice() * entry.getValue();
+        }
+
+        // Optional discount (10% if total > 100)
+        if (total > 100) {
+            total *= 0.9;
+        }
+
+        return total;
+    }
+
 
     @Override
     public String toString() {
         StringBuilder receipt = new StringBuilder("Order for " + customerName + ":\n"); // A StringBuilder is used to construct the receipt in a memory-efficient way, allowing us to build the string line by line.
-        for (var entry : items.entrySet()) {
-            receipt.append(String.format("%-20s ₺%.2f\n", entry.getKey(), entry.getValue()));
+
+        for (Map.Entry<TurkishDish, Integer> entry : items.entrySet()) {
+            TurkishDish dish = entry.getKey();
+            int quantity = entry.getValue();
+            receipt.append(String.format("%-20s ₺%.2f x %d\n", dish.getName(), dish.getPrice(), quantity));
         }
         receipt.append(String.format("Total Cost (after discount if any): ₺%.2f", totalCost));
         return receipt.toString();
+    }
 
+//    @Override
+//    public String toString() {
+//        StringBuilder receipt = new StringBuilder("Order for " + customerName + ":\n"); // A StringBuilder is used to construct the receipt in a memory-efficient way, allowing us to build the string line by line.
+//        for (var entry : items.entrySet()) {
+//            receipt.append(String.format("%-20s ₺%.2f\n", entry.getKey(), entry.getValue()));
+//        }
+//        receipt.append(String.format("Total Cost (after discount if any): ₺%.2f", totalCost));
+//        return receipt.toString();
+//    }
 
         /*
         In Java, the var keyword is used for local variable type inference.
@@ -77,5 +103,5 @@ This right-aligned formatting is typically less readable in a list, especially w
 Using %-20s makes for a consistent, organized appearance, especially for receipts or tables with
 varying item lengths.
          */
-    }
+
 }

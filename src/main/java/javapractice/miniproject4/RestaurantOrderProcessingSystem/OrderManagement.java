@@ -1,26 +1,51 @@
 package javapractice.miniproject4.RestaurantOrderProcessingSystem;
 
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class OrderManagement {
     public static void main(String[] args) {
 
-        Restaurant restaurant = new Restaurant();
+
         Scanner scanner = new Scanner(System.in);
+        Map<TurkishDish, Integer> items = new EnumMap<>(TurkishDish.class);
 
-        // Taking multiple orders
-        String moreOrders;
+        System.out.println("Enter customer name: ");
+        String customerName = scanner.nextLine();
+
+        System.out.println("\nMenu:");
+        for (TurkishDish dish : TurkishDish.values()) {
+            System.out.printf("%-20s ₺%.2f - %s\n", dish.getName(), dish.getPrice(), dish.getDescription());
+        }
+
+        String choice;
+
         do {
-            restaurant.addOrder();
-            System.out.print("Would you like to add another order? (yes/no): ");
-            moreOrders = scanner.nextLine();
-        } while (moreOrders.equalsIgnoreCase("yes"));
+            System.out.print("\nEnter dish name to order (or type 'done' to finish): ");
+            choice = scanner.nextLine().toUpperCase();
 
-        // Display all orders
-        restaurant.displayOrders();
+            try {
+                TurkishDish dish = TurkishDish.valueOf(choice);
 
-        // Calculate and display total revenue
-        System.out.printf("Total revenue: ₺%.2f\n", restaurant.calculateTotalRevenue());
+                System.out.print("Enter quantity for " + dish.getName() + ": ");
+                int quantity = scanner.nextInt();
+                scanner.nextLine(); // consume newline
+
+                items.put(dish, items.getOrDefault(dish, 0) + quantity);
+                System.out.println(quantity + " x " + dish.getName() + " added to your order.");
+
+            } catch (IllegalArgumentException e) {
+                if (!choice.equals("DONE")) {
+                    System.out.println("Dish not found in menu. Please try again.");
+                }
+            }
+
+        } while (!choice.equals("DONE"));
+
+        Order order = new Order(customerName, items);
+        System.out.println("\n" + order);
+        scanner.close();
     }
-
 }
+
