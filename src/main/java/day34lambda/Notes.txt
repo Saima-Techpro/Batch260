@@ -32,4 +32,8 @@ Intermediate Operations:
         In summary, intermediate operations return a Stream and terminal operations
         terminate the Stream. To perform operations on a Stream, at least one terminal
         operation must be invoked, because intermediate operations are lazy
-        and are actually executed only when a terminal operation is invoked. There is only one terminal operation.
+        and are actually executed only when a terminal operation is invoked.
+
+        Each stream pipeline can only have one terminal operation per execution,
+        but multiple types of terminal operations (e.g., collect, reduce, forEach)
+        are available, and any one of these can be chosen based on the needed result.
