@@ -36,10 +36,7 @@ public class InventoryItem {
      this method allows you to create a new instance of InventoryItem with an updated quantity.
      It doesn't change the existing object; instead, it generates a new one with the specified changes.
 
-    This method iterates through the inventory list to find the item by name.
-    When the item is found, it creates a new InventoryItem with the updated quantity using the withQuantity method
-    and replaces the old item in the list.
-    This maintains immutability while allowing for updates.
+
      */
 
     // String representation of the InventoryItem
