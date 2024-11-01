@@ -68,14 +68,24 @@ public class Lambda03 {
     // Other way
 
     // Create a method to get the sum of EVEN integers between the given range
-    public static int getSumOfEvens(int a , int b){
-        if (a>b){
-            int temp = a; // now a is in temp variable
-            a = b;
-            b = temp;
-        }
+//    public static int getSumOfEvens(int a , int b){
+//        if (a>b){
+//            int temp = a; // now a is in temp variable
+//            a = b;
+//            b = temp;
+//        }
+//
+//        return IntStream.range(a+1 , b).filter(Utils::isNumEven).sum();
+//    }
 
-        return IntStream.range(a+1 , b).filter(Utils::isNumEven).sum();
+    // OR
+
+    public static int getSumOfEvens(int a, int b){
+        if(a>b){
+            return IntStream.range(b, a).filter(t-> t%2==0).sum();
+        }else {
+            return IntStream.range(a, b).filter(t-> t%2==0).sum();
+        }
     }
 
 

@@ -27,6 +27,8 @@ public class SimpleInventoryManagement {
         }).collect(Collectors.toList());
     }
 
+
+
     // Create a method that returns list of items which have not reached minimum quantity
     public static List<InventoryItem> filterByMinQuantity(List<InventoryItem> inventory, int minQuantity) {
         return inventory.stream()

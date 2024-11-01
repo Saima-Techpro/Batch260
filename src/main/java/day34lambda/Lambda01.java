@@ -1,6 +1,7 @@
 package day34lambda;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -27,6 +28,13 @@ public class Lambda01 {
 
         System.out.println("=========");
         printUniqueSortedByFirstChar(myList);  // Ali Fatma Maryam Nataliya Veli Yusuf
+
+        System.out.println();
+        //Using a custom comparator
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlotte", "Dave");
+
+        // Call the method to sort by length
+        System.out.println(sortByLength(names));   // [Bob, Dave, Alice, Charlotte]
 
     }
 
@@ -83,6 +91,13 @@ public class Lambda01 {
                 //sorted(Comparator.comparing(t -> t.charAt(0))).  // t.charAt(0) provides first character
                 forEach(Utils::printWithSpace);
 
+    }
+
+    // Method to sort a list of names by length
+    public static List<String> sortByLength(List<String> names) {
+        return names.stream()
+                .sorted((name1, name2) -> Integer.compare(name1.length(), name2.length()))
+                .toList();
     }
 
 

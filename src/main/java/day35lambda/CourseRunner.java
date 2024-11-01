@@ -57,6 +57,14 @@ public class CourseRunner {
         // System.out.println(courseList.stream().max(Comparator.comparing(Course::getAvgScore)).get()); // {season='Spring', courseName='TR_DayTime', numOfStudents=130, avgScore=98}
         System.out.println(courseList.stream().max(Comparator.comparing(Course::getAvgScore)).get().getCourseName()); // TR_DayTime
 
+        //Boukakida Style
+        System.out.println("Boukakida Style: " +
+                courseList.stream()
+                        .sorted(Comparator.comparing(Course::getAvgScore))
+                        .toList()
+                        .get(courseList.size() - 1)
+                        .getCourseName());
+
         // Sort all the objects by avgScore and then put them in ascending order
         // print the 3rd object on the console
         List<Course> result5 = courseList.stream().

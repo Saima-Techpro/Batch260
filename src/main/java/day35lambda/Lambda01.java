@@ -81,5 +81,7 @@ public class Lambda01 {
         System.out.println("isTrue = " + isTrue);  // false
 
 
+
+
     }
 }
