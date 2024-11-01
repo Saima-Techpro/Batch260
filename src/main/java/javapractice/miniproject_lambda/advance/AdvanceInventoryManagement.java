@@ -1,4 +1,4 @@
-package javapractice.miniproject_lambda;
+package javapractice.miniproject_lambda.advance;
 
 import java.io.*;
 import java.util.ArrayList;

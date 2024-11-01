@@ -1,0 +1,21 @@
+Project: Inventory Management System
+
+Objective:
+To create a simple inventory management system in Java, and utilize lambda expressions to perform
+operations like sorting and filtering.
+
+Requirements:
+Create an InventoryItem Class: Define a class InventoryItem with fields for:
+
+item: The name of the item (String)
+quantity: The quantity of the item in stock (int)
+price: The price of the item (double)
+
+Define Inventory Management Operations:
+Use lambda expressions and Java Streams to implement the following functionalities:
+
+1. Display all items in the inventory.
+2. Add a new item, remove an item or update the quantity of an item
+3. Sort items by name, quantity, or price.
+4. Filter items based on a minimum quantity.
+5. Calculate the total value of the inventory.

@@ -1,4 +1,4 @@
-package javapractice.miniproject_lambda;
+package javapractice.miniproject_lambda.advance;
 
 public class InventoryItem {
 
@@ -32,9 +32,7 @@ public class InventoryItem {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+
 
     @Override
     public String toString() {
